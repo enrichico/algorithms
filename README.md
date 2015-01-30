@@ -14,16 +14,18 @@ import (
 
 func main() {
 
-	qf := quickfind.New(10)
+	//a collection of 10 elements
+	c := quickfind.New(10)
 
 	//sample union operations
-	qf.Union(6, 4)
-	qf.Union(0, 8)
-	qf.Union(7, 8)
-	qf.Union(6, 2)
-	qf.Union(0, 1)
-	qf.Union(3, 9)
+	c.Union(6, 4)
+	c.Union(0, 8)
+	c.Union(7, 8)
+	c.Union(6, 2)
+	c.Union(0, 1)
+	c.Union(3, 9)
 
 	fmt.Printf("The current array of ids is: \n")
-	qf.PrintIds()
+	c.PrintIds()
 }
+
