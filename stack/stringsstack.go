@@ -1,6 +1,7 @@
 //Package stack contains implementation of common Stacks
 package stack
 
+import "fmt"
 type node struct {
 	item string
 	next *node
