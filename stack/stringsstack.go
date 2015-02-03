@@ -2,6 +2,7 @@
 package stack
 
 import "fmt"
+
 type node struct {
 	item string
 	next *node
@@ -36,4 +37,13 @@ func (ss *StringsStack) Pop() string {
 	item := ss.first.item
 	ss.first = ss.first.next
 	return item
+}
+
+func (ss *StringsStack) Print() {
+
+	for e := ss.first; e != nil; e = e.next {
+		// do something with e.item
+		fmt.Printf("%s\n", e.item)
+	}
+
 }
