@@ -6,6 +6,7 @@ type node struct {
 	next *node
 }
 
+//Type StringStack provides the implementation of a stack of strings as a linked list
 type StringsStack struct {
 	first *node
 }
