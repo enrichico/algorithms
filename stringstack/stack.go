@@ -15,8 +15,7 @@ type Stack struct {
 
 func New() *Stack {
 
-	ss := new(Stack)
-	return ss
+	return new(Stack)
 }
 
 func (s *Stack) IsEmpty() bool {
