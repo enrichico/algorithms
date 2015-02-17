@@ -1,4 +1,4 @@
-// Package collection contains different approaches to solve the (union find) dynamic connectivity problem
+// Package quickfind contains the quickfind approach to solve the (union-find) dynamic connectivity problem
 package quickfind
 
 import "fmt"
@@ -12,7 +12,7 @@ func New(n int) *collection {
 	c := new(collection)
 
 	c.id = make([]int, n)
-	//initialize slice
+	//initialize slice, each id to its own index
 	for i := 0; i < n; i++ {
 		c.id[i] = i
 	}
