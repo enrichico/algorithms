@@ -24,6 +24,7 @@ func New(n int) *collection {
 
 func (c *collection) root(i int) int {
 
+	//follow parents until root is found
 	for i != c.id[i] {
 		i = c.id[i]
 	}
@@ -38,6 +39,7 @@ func (c *collection) Connected(p int, q int) bool {
 
 func (c *collection) Union(p int, q int) {
 
+	//put root of p under root of q
 	i := c.root(p)
 	j := c.root(q)
 	c.id[i] = j
