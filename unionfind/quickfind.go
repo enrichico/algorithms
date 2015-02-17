@@ -1,15 +1,15 @@
-// Package quickfind contains the quickfind approach to solve the (union-find) dynamic connectivity problem
+// Package unionfind contains approaches to solve the (union find) dynamic connectivity problem.
 package unionfind
 
 import "fmt"
 
-type QuickFind struct {
+type quickFind struct {
 	id []int
 }
 
-func NewQuickFind(n int) *QuickFind {
+func NewQuickFind(n int) *quickFind {
 
-	qf := new(QuickFind)
+	qf := new(quickFind)
 
 	qf.id = make([]int, n)
 	//initialize slice, each id to its own index
@@ -20,12 +20,12 @@ func NewQuickFind(n int) *QuickFind {
 	return qf
 }
 
-func (qf *QuickFind) Connected(p int, q int) bool {
+func (qf *quickFind) Connected(p int, q int) bool {
 
 	return qf.id[p] == qf.id[q]
 }
 
-func (qf *QuickFind) Union(p int, q int) {
+func (qf *quickFind) Union(p int, q int) {
 
 	pid := qf.id[p]
 	qid := qf.id[q]
@@ -37,7 +37,7 @@ func (qf *QuickFind) Union(p int, q int) {
 	}
 }
 
-func (qf *QuickFind) PrintIds() {
+func (qf *quickFind) PrintIds() {
 
 	fmt.Printf("%v\n", qf.id)
 }
