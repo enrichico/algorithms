@@ -32,7 +32,7 @@ func (qu *quickUnionWPC) root(i int) int {
 
 	//follow parents until root is found
 	for i != qu.id[i] {
-		qu.id[i] = qu.id[qu.id[i]]
+		qu.id[i] = qu.id[qu.id[i]] //path compression
 		i = qu.id[i]
 	}
 
